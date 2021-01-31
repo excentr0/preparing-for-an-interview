@@ -2,13 +2,13 @@ package lesson1;
 
 public class Triangle extends Figure {
 
-  private Long a;
-  private Long b;
-  private Long c;
+  private final Long a;
+  private final Long b;
+  private final Long c;
 
   @Override
   public Double square() {
-    Double p = (a + b + c) / Double.valueOf(2);
+    Double p = (a + b + c) / 2.0;
     return Math.sqrt(p * (p - a) * (p - b) * (p - c));
   }
 

@@ -2,7 +2,7 @@ package lesson1;
 
 public class Square extends Figure {
 
-  private Double side;
+  private final Double side;
 
   @Override
   public Double square() {
