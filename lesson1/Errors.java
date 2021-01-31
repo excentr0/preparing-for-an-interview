@@ -9,7 +9,8 @@ interface Stopable {
 }
 
 abstract class Car {
-  public Engine engine;
+  private Engine engine; // Лучше сделать поле приватным, а доступ к полю сделать через
+                         // геттер и сеттер
   private String color;
   private String name;
 
@@ -60,6 +61,7 @@ class LightWeightCar extends Car implements Moveable {
 
 // Нельзя наследоваться от более чем 1-го класса, следует использовать
 // интерфейсы
+// class Lorry extends Car, Moveable, Stopable{
 class Lorry extends Car implements Moveable, Stopable {
 
   public void move() {
@@ -70,7 +72,8 @@ class Lorry extends Car implements Moveable, Stopable {
     System.out.println("Car is stop");
   }
 
-  // Не хватало медода класса Car
+  // Не хватало абстрактного метода open класса Car, который необзодимо
+  // переопределить
   @Override
   void open() {
     System.out.println("Lorry is open");
