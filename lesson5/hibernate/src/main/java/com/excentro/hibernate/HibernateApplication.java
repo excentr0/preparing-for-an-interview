@@ -28,6 +28,8 @@ public class HibernateApplication {
 		studentDao.save(student);
 		System.out.println(studentDao.getStudents());
 
+		System.out.println(studentDao.getStudent(1L));
+
 		studentDao.closeSession();
 
 	}
