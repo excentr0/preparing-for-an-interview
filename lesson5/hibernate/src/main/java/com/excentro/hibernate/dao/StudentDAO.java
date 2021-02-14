@@ -1,8 +1,7 @@
 package com.excentro.hibernate.dao;
 
-import com.excentro.hibernate.entity.Student;
-
 import java.util.List;
+import com.excentro.hibernate.entity.Student;
 
 public interface StudentDAO {
   void save(Student student);
@@ -16,4 +15,6 @@ public interface StudentDAO {
   Student getStudent(Long id);
 
   List<Student> getStudents();
+
+  void closeSession();
 }

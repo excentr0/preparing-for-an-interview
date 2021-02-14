@@ -11,7 +11,8 @@ public class Student {
   private String name;
   private String mark;
 
-  public Student() {}
+  public Student() {
+  }
 
   public Student(String name, String mark) {
     this.name = name;
@@ -42,5 +43,10 @@ public class Student {
 
   public void setMark(String mark) {
     this.mark = mark;
+  }
+
+  @Override
+  public String toString() {
+    return "Student [id=" + id + ", mark=" + mark + ", name=" + name + "]";
   }
 }
